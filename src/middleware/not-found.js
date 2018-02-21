@@ -1,4 +1,4 @@
 export default (req, res, next) => {
-  res.status(400);
+  res.status(404);
   next(new Error('Not Found'));
 };
