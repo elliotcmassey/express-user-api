@@ -1,0 +1,4 @@
+test/unit
+--require ./test/helpers.js
+--recursive
+--bail

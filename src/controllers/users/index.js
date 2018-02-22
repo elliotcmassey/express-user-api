@@ -1,7 +1,7 @@
 import express from 'express';
-import { bookshelf } from '../../modules/bookshelf';
 import { validationResult } from 'express-validator/check';
 import { matchedData } from 'express-validator/filter';
+import { bookshelf } from '../../modules/bookshelf';
 import User from './../../models/user';
 import { getValidator, putValidator, deleteValidator, postValidator } from './validation';
 
@@ -128,7 +128,6 @@ router.post(
   },
   async (req, res, next) => {
     try {
-      const bookshelf = req.app.get('bookshelf');
       const validatedInput = matchedData(req);
       const user = new User({ id: null, ...validatedInput });
 
