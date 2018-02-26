@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Express users api",
+		"_postman_id": "f0954f0d-ade3-51cc-20dc-ac237a1a2050",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get users",
+			"request": {
+				"url": "localhost:3000/users",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create a user",
+			"request": {
+				"url": "localhost:3000/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"newuser@example.com\",\n\t\"forename\": \"Johnnew\",\n\t\"surname\": \"Personew\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get a user",
+			"request": {
+				"url": "localhost:3000/users/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update a user",
+			"request": {
+				"url": "localhost:3000/users/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"test2@example.com\",\n\t\"forename\": \"test - updated\",\n\t\"surname\": \"sur\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a user",
+			"request": {
+				"url": "localhost:3000/users/2",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
