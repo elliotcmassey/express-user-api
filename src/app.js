@@ -7,22 +7,20 @@ import notFound from './middleware/not-found';
 import errorHandler from './middleware/error-handler';
 import appRouter from './controllers';
 
-export default async () => {
-  const app = express();
+const app = express();
 
-  app.use(logger('dev'));
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: false }));
-  app.use(cookieParser());
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
 
-  app.set('bookshelf', bookshelf);
+app.set('bookshelf', bookshelf);
 
-  app.use(appRouter);
+app.use(appRouter);
 
-  // catch 404 and forward to error handler
-  app.use(notFound);
-  // error handler
-  app.use(errorHandler);
+// catch 404 and forward to error handler
+app.use(notFound);
+// error handler
+app.use(errorHandler);
 
-  return app;
-};
+export default app;

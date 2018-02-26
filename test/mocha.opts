@@ -1,4 +1,4 @@
-test/unit
---require ./test/helpers.js
+test
+--require babel-register
 --recursive
 --bail
